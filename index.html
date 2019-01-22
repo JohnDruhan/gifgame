@@ -5,23 +5,35 @@
   <meta charset="UTF-8">
   <title>Gif Game</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Permanent+Marker" rel="stylesheet">
 </head>
 
 <body>
 
-  <div id="animal-buttons">
-
+    <div id="main">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Animal Gif Game</h1>
+    <p>PICK AN ANIMAL BELOW OR ADD YOUR OWN</p>
   </div>
+</div>
 
-  <form id="animal-form">
-    <label for="animal-input">Add an animal</label>
-    <input type="text" id="animal-input"><br>
-    <input id="add-animal" type="submit" value="Submit">
-  </form>
 
-  <div id="animals">
+    <div id="animal-buttons">
 
-  </div>
+    </div>
+
+        <form id="animal-form">
+            <label for="animal-input">Add An Animal</label>
+            <input type="text" id="animal-input"><br>
+            <input id="add-animal" type="submit" value="Submit">
+        </form>
+
+        <div id="animals">
+
+        </div>
+    </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="gif.js"></script>
