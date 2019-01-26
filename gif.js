@@ -17,14 +17,18 @@ $(document).ready(function() {
         a.text(arrayToUse[i]);
         $(areaToAddTo).append(a);
       }
-  
     }
+
+    // On click of "animal button" empty array, remove active class, and add new active class
   
     $(document).on("click", ".animal-button", function() {
       $("#animals").empty();
       $(".animal-button").removeClass("active");
       $(this).addClass("active");
   
+
+      //  make api call, ajax get function
+      // then get results 
       var type = $(this).attr("data-type");
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=rbw1iDvPJUMl11vdMRMgwX0aPSu5RUXR&limit=10";
   
@@ -32,6 +36,7 @@ $(document).ready(function() {
         url: queryURL,
         method: "GET"
       })
+        // then get results, fill div with gif and rating
         .then(function(response) {
           var results = response.data;
   
@@ -60,6 +65,8 @@ $(document).ready(function() {
         });
     });
   
+// on click add  still animal gif
+
     $(document).on("click", ".animal-image", function() {
   
       var state = $(this).attr("data-state");
